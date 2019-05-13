@@ -1,0 +1,13 @@
+module provedor {
+
+    interface provedorInterface{
+        boolean insertarProvedor(in wstring nit, in wstring nombre, in wstring direccion, in long telefono);
+        boolean actualizarProvedor(in long idTablaProvedor, in wstring nit, in wstring nombre, in wstring direccion, in long telefono);
+        boolean eliminarProvedor(in long idTablaProvedor);
+
+        oneway void shoutdown();
+
+    };
+};
+
+

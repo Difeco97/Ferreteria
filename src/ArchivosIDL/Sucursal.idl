@@ -1,0 +1,14 @@
+module sucursal {
+
+    interface sucursalInterface{
+
+        boolean insertarSucursal(in wstring nit, in wstring nombre, in wstring direccion, in long telefono);
+        boolean actualizarSucursal(in long idSucursal, in wstring nit, in wstring nombre, in wstring direccion, in long telefono);
+        boolean eliminarSucursal(in long idSucursal);
+        
+
+        oneway void shoutdown();
+
+    };
+};
+

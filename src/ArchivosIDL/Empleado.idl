@@ -1,0 +1,12 @@
+module EmpleadoApp{
+
+    interface Empleado{
+        boolean insertarEmpleado(in long cedula, in wstring nombres, in wstring apellidos, in wstring cargo_id, in wstring sucursal_id);
+        boolean actualizarEmpleado(in long idTablaEmpleado,in long cedula, in wstring nombres, in wstring apellidos, in wstring cargo_id, in wstring sucursal_id);
+        boolean eliminarEmpleado(in long idTablaEmpleado);
+
+        oneway void shoutdown();
+
+    };
+};
+
