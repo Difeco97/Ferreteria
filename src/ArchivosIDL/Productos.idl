@@ -1,13 +1,9 @@
-module empleado {
-
-    interface empleados{
-        boolean insertarEmpleado(in long cedula, in wstring nombres, in wstring apellidos, in wstring cargo_id, in wstring sucursal_id);
-        boolean actualizarEmpleado(in long idTablaEmpleado,in long cedula, in wstring nombres, in wstring apellidos, in wstring cargo_id, in wstring sucursal_id);
-        boolean eliminarEmpleado(in long idTablaEmpleado);
-
-        oneway void shoutdown();
-
+module productos {
+    
+    interface producto{
+        boolean insertarProducto(in long codigo,in wstring nombre, in long cantidad, in long precio, in wstring provedores_nit, in wstring descripcion);
+        boolean actualizarProducto(in long idTablaProducto,in long codigo,in wstring nombre, in long cantidad, in long precio, in wstring provedores_nit, in wstring descripcion);
+        boolean eliminarProducto(in long idTablaProducto);
     };
 };
-
 
