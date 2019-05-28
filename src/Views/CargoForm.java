@@ -19,8 +19,10 @@ public class CargoForm extends javax.swing.JFrame {
    private DefaultTableModel modelTableCargo;
     
     public CargoForm() {
+        
         modelTableCargo = new DefaultTableModel(null, getColumn());    
         initComponents();    
+        this.setLocationRelativeTo(null);
         txtId.setEditable(false);
     }
     
@@ -33,60 +35,150 @@ public class CargoForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtId = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        txtCodigo = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
+        lblCodigo = new javax.swing.JLabel();
+        txtCargo = new javax.swing.JTextField();
         btnGuardar = new javax.swing.JButton();
+        lblCargo = new javax.swing.JLabel();
         btnEliminar = new javax.swing.JButton();
+        txtSueldo = new javax.swing.JTextField();
         btnActualizar = new javax.swing.JButton();
+        lblSaldo = new javax.swing.JLabel();
         btnConsultar = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
         lblCargoTitulo = new javax.swing.JLabel();
+        btnMenu = new javax.swing.JButton();
         lblId = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCargo = new javax.swing.JTable();
-        txtCodigo = new javax.swing.JTextField();
-        lblCodigo = new javax.swing.JLabel();
-        txtCargo = new javax.swing.JTextField();
-        lblCargo = new javax.swing.JLabel();
-        txtSueldo = new javax.swing.JTextField();
-        lblSaldo = new javax.swing.JLabel();
-        btnLimpiar = new javax.swing.JButton();
-        btnMenu = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(760, 530));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(664, 714, 118, 20));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(txtCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 130, 111, -1));
+        jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 111, -1));
+
+        lblCodigo.setForeground(new java.awt.Color(0, 0, 0));
+        lblCodigo.setText("CODIGO");
+        jPanel1.add(lblCodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, -1, -1));
+
+        txtCargo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtCargoKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 80, 111, -1));
+
+        btnGuardar.setForeground(new java.awt.Color(0, 0, 0));
         btnGuardar.setText("GUARDAR");
+        btnGuardar.setBorder(null);
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 100, 40));
 
+        lblCargo.setForeground(new java.awt.Color(0, 0, 0));
+        lblCargo.setText("CARGO");
+        jPanel1.add(lblCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 80, -1, -1));
+
+        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("ELIMINAR");
+        btnEliminar.setBorder(null);
+        btnEliminar.setBorderPainted(false);
+        btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 400, 90, 40));
 
+        txtSueldo.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txtSueldoKeyTyped(evt);
+            }
+        });
+        jPanel1.add(txtSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 130, 111, -1));
+
+        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setBorder(null);
+        btnActualizar.setBorderPainted(false);
+        btnActualizar.setContentAreaFilled(false);
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, 110, 40));
 
+        lblSaldo.setForeground(new java.awt.Color(0, 0, 0));
+        lblSaldo.setText("SUELDO");
+        jPanel1.add(lblSaldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 130, -1, -1));
+
+        btnConsultar.setForeground(new java.awt.Color(0, 0, 0));
         btnConsultar.setText("CONSULTAR");
+        btnConsultar.setBorder(null);
+        btnConsultar.setBorderPainted(false);
+        btnConsultar.setContentAreaFilled(false);
+        btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 400, 110, 40));
 
-        lblCargoTitulo.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(0, 0, 0));
+        btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.setBorder(null);
+        btnLimpiar.setBorderPainted(false);
+        btnLimpiar.setContentAreaFilled(false);
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimpiarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 400, 90, 40));
+
+        lblCargoTitulo.setFont(new java.awt.Font("Tahoma", 1, 36)); // NOI18N
+        lblCargoTitulo.setForeground(new java.awt.Color(0, 0, 0));
         lblCargoTitulo.setText("CARGO");
+        jPanel1.add(lblCargoTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 30, -1, -1));
 
+        btnMenu.setForeground(new java.awt.Color(0, 0, 0));
+        btnMenu.setText("MENU");
+        btnMenu.setBorder(null);
+        btnMenu.setBorderPainted(false);
+        btnMenu.setContentAreaFilled(false);
+        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMenuActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 450, 70, 40));
+
+        lblId.setForeground(new java.awt.Color(0, 0, 0));
         lblId.setText("ID");
+        jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 90, -1, -1));
 
+        tblCargo.setForeground(new java.awt.Color(0, 0, 0));
         tblCargo.setModel(modelTableCargo);
         tblCargo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -95,134 +187,9 @@ public class CargoForm extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tblCargo);
 
-        lblCodigo.setText("CODIGO");
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 580, 200));
 
-        txtCargo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtCargoKeyTyped(evt);
-            }
-        });
-
-        lblCargo.setText("CARGO");
-
-        txtSueldo.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyTyped(java.awt.event.KeyEvent evt) {
-                txtSueldoKeyTyped(evt);
-            }
-        });
-
-        lblSaldo.setText("SUELDO");
-
-        btnLimpiar.setText("LIMPIAR");
-        btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLimpiarActionPerformed(evt);
-            }
-        });
-
-        btnMenu.setText("MENU");
-        btnMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnMenuActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(664, 664, 664)
-                .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(btnGuardar)
-                                .addGap(18, 18, 18)
-                                .addComponent(btnActualizar)
-                                .addGap(18, 18, 18)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnMenu)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(btnEliminar)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(btnConsultar)
-                                        .addGap(31, 31, 31)
-                                        .addComponent(btnLimpiar)))))
-                        .addGap(97, 97, 97))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblId)
-                                        .addGap(83, 83, 83)
-                                        .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(lblCodigo)
-                                        .addGap(53, 53, 53)
-                                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(44, 44, 44)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblCargo)
-                                        .addGap(53, 53, 53)
-                                        .addComponent(txtCargo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(lblSaldo)
-                                        .addGap(50, 50, 50)
-                                        .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(198, 198, 198)
-                                .addComponent(lblCargoTitulo)))
-                        .addGap(110, 110, 110))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblCargoTitulo)
-                .addGap(21, 21, 21)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblId)
-                    .addComponent(txtCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblCargo))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblCodigo)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtSueldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblSaldo))))
-                .addGap(31, 31, 31)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnActualizar)
-                    .addComponent(btnEliminar)
-                    .addComponent(btnConsultar)
-                    .addComponent(btnLimpiar)
-                    .addComponent(btnGuardar))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(28, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(btnMenu)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-        );
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 530));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -485,6 +452,7 @@ public class CargoForm extends javax.swing.JFrame {
     private javax.swing.JButton btnLimpiar;
     private javax.swing.JButton btnMenu;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblCargo;
     private javax.swing.JLabel lblCargoTitulo;

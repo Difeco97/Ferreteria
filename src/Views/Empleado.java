@@ -27,6 +27,7 @@ public class Empleado extends javax.swing.JFrame {
         modelComboCargo = new DefaultComboBoxModel(new String [] {});
         
          initComponents();
+         this.setLocationRelativeTo(null);
          
          //txtId.setEditable(false);
 
@@ -130,6 +131,11 @@ public class Empleado extends javax.swing.JFrame {
         jPanel1.add(lblCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
 
         tblEmpleado.setModel(modelTableEmpleado);
+        tblEmpleado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblEmpleadoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblEmpleado);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 346, 326));
@@ -516,6 +522,18 @@ public class Empleado extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(rootPane, "Ingresar solo letras");
         }
     }//GEN-LAST:event_txtApellidosKeyTyped
+
+    private void tblEmpleadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEmpleadoMouseClicked
+         //Defino el modelo para el JTable
+        DefaultTableModel modeloTabla = (DefaultTableModel) tblEmpleado.getModel();
+
+        //Asigno los elementos seleccionados de la tabla a los respectivos campos del formulario
+        txtId.setText(modeloTabla.getValueAt(tblEmpleado.getSelectedRow(), 0).toString()); 
+        txtCedula.setText(modeloTabla.getValueAt(tblEmpleado.getSelectedRow(), 1).toString());
+        txtNombres.setText((String) modeloTabla.getValueAt(tblEmpleado.getSelectedRow(), 2));
+        txtApellidos.setText((String)modeloTabla.getValueAt(tblEmpleado.getSelectedRow(), 3));             
+        
+    }//GEN-LAST:event_tblEmpleadoMouseClicked
 
     /**
      * @param args the command line arguments

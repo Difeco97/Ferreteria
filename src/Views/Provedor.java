@@ -23,6 +23,7 @@ public class Provedor extends javax.swing.JFrame {
     public Provedor() {
         modelTableProvedor = new DefaultTableModel(null, getColumn());
         initComponents();
+        this.setLocationRelativeTo(null);
         txtId.setEditable(false);
     }
     

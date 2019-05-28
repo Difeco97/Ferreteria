@@ -26,6 +26,7 @@ private DefaultTableModel modelTablaProductos;
         modelTablaProductos = new DefaultTableModel(null, getColumn());
         modeloCombo = new DefaultComboBoxModel(new String [] {});
         initComponents();
+        this.setLocationRelativeTo(null);
         txtId.setEditable(false);
         //Instancion al clase productos
         TablaProductos objproductos = new TablaProductos();

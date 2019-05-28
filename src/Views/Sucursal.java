@@ -23,6 +23,7 @@ public class Sucursal extends javax.swing.JFrame {
        
         modelTableSucursal = new DefaultTableModel(null, getColumn());       
         initComponents();
+        this.setLocationRelativeTo(null);
         txtId.setEditable(false);
         
     }
@@ -64,13 +65,18 @@ public class Sucursal extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        btnMenu.setForeground(new java.awt.Color(0, 0, 0));
         btnMenu.setText("MENU");
+        btnMenu.setBorder(null);
+        btnMenu.setBorderPainted(false);
+        btnMenu.setContentAreaFilled(false);
+        btnMenu.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMenuActionPerformed(evt);
             }
         });
-        jPanel1.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, -1, -1));
+        jPanel1.add(btnMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 440, 80, 30));
 
         lblDireccion.setForeground(new java.awt.Color(0, 0, 0));
         lblDireccion.setText("DIRECCION");
@@ -92,6 +98,11 @@ public class Sucursal extends javax.swing.JFrame {
         jPanel1.add(lblId, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 93, 24));
 
         tblSucursal.setModel(modelTableSucursal);
+        tblSucursal.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblSucursalMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tblSucursal);
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 10, -1, -1));
@@ -102,34 +113,49 @@ public class Sucursal extends javax.swing.JFrame {
         lblSucursal.setText("SUCURSAL");
         jPanel1.add(lblSucursal, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 280, 30));
 
+        btnActualizar.setForeground(new java.awt.Color(0, 0, 0));
         btnActualizar.setText("ACTUALIZAR");
+        btnActualizar.setBorder(null);
+        btnActualizar.setBorderPainted(false);
+        btnActualizar.setContentAreaFilled(false);
+        btnActualizar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnActualizar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnActualizarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, -1));
+        jPanel1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, 120, 30));
         jPanel1.add(txtNit, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 104, -1));
 
+        btnConsultar.setForeground(new java.awt.Color(0, 0, 0));
         btnConsultar.setText("CONSULTAR");
+        btnConsultar.setBorder(null);
+        btnConsultar.setBorderPainted(false);
+        btnConsultar.setContentAreaFilled(false);
+        btnConsultar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnConsultarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, -1, -1));
+        jPanel1.add(btnConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 440, 120, 30));
 
         lblNit.setForeground(new java.awt.Color(0, 0, 0));
         lblNit.setText("NIT");
         jPanel1.add(lblNit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 210, 93, 24));
 
+        btnEliminar.setForeground(new java.awt.Color(0, 0, 0));
         btnEliminar.setText("ELIMINAR");
+        btnEliminar.setBorder(null);
+        btnEliminar.setBorderPainted(false);
+        btnEliminar.setContentAreaFilled(false);
+        btnEliminar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnEliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliminarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, -1, -1));
+        jPanel1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 440, 100, 30));
 
         txtNombre.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
@@ -138,25 +164,35 @@ public class Sucursal extends javax.swing.JFrame {
         });
         jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 250, 104, -1));
 
+        btnGuardar.setForeground(new java.awt.Color(0, 0, 0));
         btnGuardar.setText("GUARDAR");
+        btnGuardar.setBorder(null);
+        btnGuardar.setBorderPainted(false);
+        btnGuardar.setContentAreaFilled(false);
+        btnGuardar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGuardarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, -1, -1));
+        jPanel1.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 100, 30));
 
         lblNombre.setForeground(new java.awt.Color(0, 0, 0));
         lblNombre.setText("NOMBRE");
         jPanel1.add(lblNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 93, 24));
 
+        btnLimpiar.setForeground(new java.awt.Color(0, 0, 0));
         btnLimpiar.setText("LIMPIAR");
+        btnLimpiar.setBorder(null);
+        btnLimpiar.setBorderPainted(false);
+        btnLimpiar.setContentAreaFilled(false);
+        btnLimpiar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnLimpiarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, -1, -1));
+        jPanel1.add(btnLimpiar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 440, 90, 30));
         jPanel1.add(txtDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 104, -1));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 230, 30));
 
@@ -383,6 +419,18 @@ public class Sucursal extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(rootPane, "Ingresar solo numeros");
      }
     }//GEN-LAST:event_txtTelefonoKeyTyped
+
+    private void tblSucursalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSucursalMouseClicked
+          //Defino el modelo para el JTable
+        DefaultTableModel modeloTabla = (DefaultTableModel) tblSucursal.getModel();
+
+        //Asigno los elementos seleccionados de la tabla a los respectivos campos del formulario
+        txtId.setText(modeloTabla.getValueAt(tblSucursal.getSelectedRow(), 0).toString()); 
+        txtNit.setText(modeloTabla.getValueAt(tblSucursal.getSelectedRow(), 1).toString());
+        txtNombre.setText((String) modeloTabla.getValueAt(tblSucursal.getSelectedRow(), 2));
+        txtDireccion.setText((String)modeloTabla.getValueAt(tblSucursal.getSelectedRow(), 3)); 
+        txtTelefono.setText(modeloTabla.getValueAt(tblSucursal.getSelectedRow(), 4).toString());
+    }//GEN-LAST:event_tblSucursalMouseClicked
 
     /**
      * @param args the command line arguments
